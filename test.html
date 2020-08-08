@@ -2,11 +2,12 @@
   <head></head>
   <body>
     <input type="button" id="theButton" value="Say hello">
+    <span id="t">oh yeah</span>
     <script type="text/javascript">
       document.getElementById('theButton').onclick = function() {
         sayHello();
-        alert('true');
-        for (const i=0; i<10000; i++) alert('yes');
+        console.log('hi');
+        document.getElementById('t').innerHTML = 'yo yo';
       };     
     </script>
   </body>
