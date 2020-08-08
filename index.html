@@ -10,13 +10,17 @@
     <h1>Caja host page</h1>
     <div id="guest"></div>
     <script type="text/javascript">
+      function alertGreeting() { alert('Hello world'); };
       caja.initialize({
         cajaServer: 'https://caja.appspot.com/',
         debug: true
       });
       caja.load(document.getElementById('guest'), undefined, function(frame) {
-        frame.code('https://raw.githubusercontent.com/moein/moein.github.io/master/test.html',
+        caja.markFunction(alertGreeting);
+        var tamedAlertGreeting = caja.tame(alertGreeting);
+        frame.code('https://developers.google.com/caja/demos/providingservices/guest.html',
                    'text/html')
+             .api({ sayHello: tamedAlertGreeting })
              .run();
      });
     </script>
