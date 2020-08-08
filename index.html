@@ -18,7 +18,7 @@
       caja.load(document.getElementById('guest'), undefined, function(frame) {
         caja.markFunction(alertGreeting);
         var tamedAlertGreeting = caja.tame(alertGreeting);
-        frame.code('https://developers.google.com/caja/demos/providingservices/guest.html',
+        frame.code('https://raw.githubusercontent.com/moein/moein.github.io/master/test.html',
                    'text/html')
              .api({ sayHello: tamedAlertGreeting })
              .run();
