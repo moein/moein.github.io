@@ -12,8 +12,9 @@
     <script type="text/javascript">
       function alertGreeting() { alert('Hello world'); };
       caja.initialize({
-        cajaServer: 'https://caja.appspot.com/',
-        debug: true
+        #cajaServer: 'https://caja.appspot.com/',
+        es5Mode: true,
+        debug: true,
       });
       caja.load(document.getElementById('guest'), undefined, function(frame) {
         caja.markFunction(alertGreeting);
